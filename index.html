@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app 🌤️</title>
+    <script src="https://kit.fontawesome.com/be9d53aead.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+      integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <link href="src/styles.css" rel="stylesheet" type="text/css" />
+
+
+   
+</head>
+<body>
+    <div class="city">
+  <p class="intro">The weather app</p>
+ 
+  <form class="search-form">
+    <input type="text" id = "placeSearch" placeholder="Enter your city here" />
+    <input class="btn"type="submit" value="Search" >
+        <input class="currentbar" type="button" value="Current" >
+  </form>
+  <div class="container">
+    <div class="item">
+      <p class="toptown" id = "test"> </p>
+      <ul class="day-week">  
+        <li class ="dayHour">  </li>
+          <li class="dayDay"> <strong></strong></li>
+      </ul>
+      <h1> <span class = "space"> </span> <span class="units"> <a id="celcius-link" href="#">°C <span class="line">|</span> <a id="faherenheit-link"
+            href="#">°F</a></span>  </h1>
+     
+      </div>
+      <div class="item2">
+    <ul>   
+    <li class="density"> <td> <i class="fa-solid fa-umbrella"></i> </td> Pressure: <span class="pressure"> 10% </span> </li>
+    <li class="density"><i class="fa-solid fa-temperature-half"></i> Humidity: <span class="humidityNumber">84%</span></li>
+          <li class="density"><i class="fa-solid fa-wind"></i> Wind: <span class="speedWind">36km/h</span>  </li>
+      </ul>
+      </div>
+      </div>
+    
+    <span> 5-day forecast </span>
+  <hr />
+    </br>
+ <table class="temperature">
+  <tr>
+ <td>  Wed</td>
+  <td>Thu</td>
+  <td>Fri</td>
+    <td>Sat</td>
+      <td>Sun</td>
+      </tr>
+      <tr>
+        <td> <strong>16°c</strong> </td>
+          <td><strong>13°c</strong></td>
+            <td><strong>17°c</strong></td>
+              <td><strong>11°c</strong></td>
+                <td><strong>16°c</strong></td>
+      </tr>
+      <tr>
+      <td> <i class="fa-solid fa-cloud icon"></i> </td>
+    <td> <i class="fa-solid fa-cloud-sun-rain icon"></i> </td>
+      <td> <i class="fa-regular fa-sun icon"></i> </td>
+      <td> <i class="fa-solid fa-cloud-showers-heavy icon"></i> </td>
+      <td> <i class="fa-solid fa-cloud-sun icon"></i> </td>
+
+</tr>
+
+ </table>
+</div>
+  
+<script src="src/index.js"></script>
+
+</script>
+</body>
+</html>
