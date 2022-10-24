@@ -131,13 +131,18 @@ h1,.space{
  
   font-weight: bold;
   font-size: 74px;
-  margin: -17px 2px 5px 5px;
+  margin: -17px 2px 5px -4px;
   color: #ffffff;
   font-family: 'Cabin', sans-serif;    
 }
 
 .space{
   margin-right: -6px;
+}
+
+img{
+max-width: 70px;  
+height: auto;  
 }
 
 a{
