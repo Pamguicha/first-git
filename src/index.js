@@ -91,4 +91,16 @@ currentButton.addEventListener("click", currentLocation);
 let form = document.querySelector(".search-form");
 form.addEventListener("submit", searchCity);
 
+
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+   let temperatureElement = document.querySelector(".space");
+  let fahrenheitTemperature = (temperatureElement.innerHTML * 9)/ 5 +32;
+   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#faherenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+
 weatherApi("Santiago");
