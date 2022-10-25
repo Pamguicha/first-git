@@ -105,5 +105,15 @@ let celciusTemperature = null;
 let fahrenheitLink = document.querySelector("#faherenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
+function showCelciusTemperature(event){
+  event.preventDefault();
+    let temperatureElement = document.querySelector(".space");
+     temperatureElement.innerHTML = celciusTemperature;
+}
+
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", showCelciusTemperature);
+
 
 weatherApi("Santiago");
