@@ -37,8 +37,8 @@ reloj.innerHTML = realHour(currentTime);
 
 function showTemperature(response) {
     let h1 = document.querySelector(".space");
-    let temperature = Math.round(response.data.main.temp);
-    h1.innerHTML = `${temperature}`;
+    celciusTemperature = Math.round(response.data.main.temp);
+    h1.innerHTML = `${celciusTemperature}`;
     let infoForecast = document.querySelector(".dayDay"); 
     infoForecast.innerHTML = `<strong>${response.data.weather[0].description}</strong>`;
     let wind = document.querySelector(".speedWind");
@@ -92,12 +92,15 @@ let form = document.querySelector(".search-form");
 form.addEventListener("submit", searchCity);
 
 
+
 function showFahrenheitTemperature(event) {
   event.preventDefault();
    let temperatureElement = document.querySelector(".space");
-  let fahrenheitTemperature = (temperatureElement.innerHTML * 9)/ 5 +32;
+  let fahrenheitTemperature = (celciusTemperature * 9)/ 5 +32;
    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
+
+let celciusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#faherenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
