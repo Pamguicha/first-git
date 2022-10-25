@@ -154,6 +154,14 @@ a{
        font-family: 'Cabin', sans-serif;   
 }
 
+
+
+.special-celcius{
+  color:  #8a5cbc;
+  font-weight: lighter;
+  cursor: default;
+}
+
 .units{
   position: relative;
   top: -32px;
@@ -161,6 +169,7 @@ a{
     text-decoration: none;
     background-color: transparent;
 }
+
 
 
 ul{
