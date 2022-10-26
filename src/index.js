@@ -34,10 +34,13 @@ reloj.innerHTML = realHour(currentTime);
 function displayForecast (){
   let forecastElement = document.querySelector("#forecast-weather");
 
-  let forecastHTML = `<tr>`;
+  let forecastHTML = ``;
    forecastHTML =  forecastHTML +  
-  `
- <td> Wed</td>
+` 
+<table>
+<tbody>
+<tr>
+  <td> Wed</td>
       </tr>
       <tr>
         <td> <strong>16°c</strong> </td>
@@ -45,11 +48,15 @@ function displayForecast (){
       <tr>
       <td> <i class="fa-solid fa-cloud icon"></i> </td>
 </tr>
+</tbody>
+</table>
 
 `;
   forecastHTML =  forecastHTML +  
   `
-  <tr>
+<table>
+<tbody>
+<tr>
  <td> Wed</td>
       </tr>
       <tr>
@@ -57,10 +64,13 @@ function displayForecast (){
       </tr>
       <tr>
       <td> <i class="fa-solid fa-cloud icon"></i> </td>
+      </tr>
+      </tbody>
+      </table>
 
 
 `;
-forecastHTML = forecastHTML + `</tr>`;
+forecastHTML = forecastHTML + ``;
    forecastElement.innerHTML = forecastHTML;
 
 }
