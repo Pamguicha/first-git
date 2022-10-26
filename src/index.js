@@ -31,6 +31,39 @@ let reloj = document.querySelector(".dayHour");
 let currentTime = new Date();
 reloj.innerHTML = realHour(currentTime);
 
+function displayForecast (){
+  let forecastElement = document.querySelector("#forecast-weather");
+
+  let forecastHTML = `<tr>`;
+   forecastHTML =  forecastHTML +  
+  `
+ <td> Wed</td>
+      </tr>
+      <tr>
+        <td> <strong>16°c</strong> </td>
+      </tr>
+      <tr>
+      <td> <i class="fa-solid fa-cloud icon"></i> </td>
+</tr>
+
+`;
+  forecastHTML =  forecastHTML +  
+  `
+  <tr>
+ <td> Wed</td>
+      </tr>
+      <tr>
+        <td> <strong>16°c</strong> </td>
+      </tr>
+      <tr>
+      <td> <i class="fa-solid fa-cloud icon"></i> </td>
+
+
+`;
+forecastHTML = forecastHTML + `</tr>`;
+   forecastElement.innerHTML = forecastHTML;
+
+}
 
 
 
@@ -121,3 +154,4 @@ celciusLink.addEventListener("click", showCelciusTemperature);
 
 
 weatherApi("Santiago");
+displayForecast();
