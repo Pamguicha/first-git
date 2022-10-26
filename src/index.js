@@ -35,29 +35,14 @@ function displayForecast (){
   let forecastElement = document.querySelector("#forecast-weather");
 
   let forecastHTML = ``;
-   forecastHTML =  forecastHTML +  
-` 
-<table>
-<tbody>
-<tr>
-  <td> Wed</td>
-      </tr>
-      <tr>
-        <td> <strong>16°c</strong> </td>
-      </tr>
-      <tr>
-      <td> <i class="fa-solid fa-cloud icon"></i> </td>
-</tr>
-</tbody>
-</table>
-
-`;
-  forecastHTML =  forecastHTML +  
+let days = ["Thu","Fri","Sat","Sun","Mon"];
+days.forEach(function(day){
+  forecastHTML = forecastHTML +  
   `
 <table>
 <tbody>
 <tr>
- <td> Wed</td>
+ <td> ${day}</td>
       </tr>
       <tr>
         <td> <strong>16°c</strong> </td>
@@ -70,7 +55,12 @@ function displayForecast (){
 
 
 `;
-forecastHTML = forecastHTML + ``;
+
+})
+
+
+
+ forecastHTML = forecastHTML + ``;
    forecastElement.innerHTML = forecastHTML;
 
 }
