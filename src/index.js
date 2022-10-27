@@ -70,10 +70,8 @@ forecast.forEach(function(forecastDay, index){
 
 })
 
-
-
  forecastHTML = forecastHTML + ``;
-   forecastElement.innerHTML = forecastHTML;
+forecastElement.innerHTML = forecastHTML;
 
 }
 
