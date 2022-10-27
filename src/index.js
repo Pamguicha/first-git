@@ -31,31 +31,42 @@ let reloj = document.querySelector(".dayHour");
 let currentTime = new Date();
 reloj.innerHTML = realHour(currentTime);
 
-function displayForecast(response){
-  console.log(response.data.daily);
-  let forecastElement = document.querySelector("#forecast-weather");
+function formatDay(timestamp){
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  
+  return days[day];
+}
 
-  let forecastHTML = ``;
-let days = ["Thu","Fri","Sat","Sun","Mon"];
-days.forEach(function(day){
+
+function displayForecast(response){
+let forecast = response.data.daily;
+let forecastElement = document.querySelector("#forecast-weather");
+
+let forecastHTML = ``;
+
+forecast.forEach(function(forecastDay, index){
+  if (index < 5) {
   forecastHTML = forecastHTML +  
   `
 <table>
 <tbody>
 <tr>
- <td> ${day}</td>
+ <td> ${formatDay(forecastDay.dt)}</td>
       </tr>
       <tr>
-        <td> <strong>16°c</strong> </td>
+        <td> <strong>${Math.round(forecastDay.temp.max)}°</strong> </td>
       </tr>
       <tr>
-      <td> <i class="fa-solid fa-cloud icon"></i> </td>
+      <td> <img src = "http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt = "" width ="62" </td>
       </tr>
       </tbody>
       </table>
 
 
 `;
+}
 
 })
 
