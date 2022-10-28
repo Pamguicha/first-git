@@ -148,19 +148,26 @@ height: auto;
 }
 
 a{
-     color: #ffffff;
+  
     text-decoration: none;
     background-color: transparent;
     font-size: 21px;
       font-weight: bold;
        font-family: 'Cabin', sans-serif;   
+font-weight: 100;
 }
 
 
 
 .special-celcius{
-  color:  #8a5cbc;
-  font-weight: lighter;
+  color:  #ffffff;
+  font-weight:bolder;
+  cursor: default;
+}
+
+.special-faherenheit{
+ color:  #ffffff;
+  font-weight: bolder;
   cursor: default;
 }
 
