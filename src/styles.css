@@ -156,6 +156,15 @@ a{
        font-family: 'Cabin', sans-serif;   
 font-weight: 100;
   cursor: default;
+  color: #ffffff;;
+}
+
+.colour-celcius{
+  color:#8a5cbc;
+}
+
+.colour-faherenheit{
+    color:#8a5cbc;
 }
 
 
@@ -169,7 +178,8 @@ font-weight: 100;
 .special-faherenheit{
  color:  #ffffff;
   font-weight: bolder;
-    cursor:pointer;
+  cursor:pointer;
+  
 }
 
 .units{
