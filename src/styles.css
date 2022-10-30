@@ -149,43 +149,34 @@ height: auto;
 
 a{
   
-    text-decoration: none;
-    background-color: transparent;
-    font-size: 21px;
-      font-weight: bold;
-       font-family: 'Cabin', sans-serif;   
+text-decoration: none;
+background-color: transparent;
+font-size: 21px;
+font-weight: bold;
+font-family: 'Cabin', sans-serif;   
 font-weight: 100;
-  cursor: default;
-  color: #ffffff;;
-}
-
-.colour-celcius{
-  color:#8a5cbc;
+cursor: default;
+ color: #8a5cbc;
 }
 
 .colour-faherenheit{
-    color:#8a5cbc;
+  color: white;
+  cursor: pointer;
 }
-
-
 
 .special-celcius{
-  color:  #ffffff;
-  font-weight:bolder;
-  cursor:pointer;
+ color: #ffffff;
+    cursor: pointer;
 }
-
+ 
 .special-faherenheit{
- color:  #ffffff;
-  font-weight: bolder;
-  cursor:pointer;
-  
+   color: #ffffff;
+   cursor:pointer;
 }
 
 .units{
   position: relative;
   top: -32px;
-   color: #ffffff;
     text-decoration: none;
     background-color: transparent;
 }

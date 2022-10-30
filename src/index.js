@@ -118,6 +118,9 @@ axios.get(apiUrl).then(showTemperature);
 function searchCity (event) {
 event.preventDefault(); 
 let city = document.querySelector("#placeSearch").value;
+ celciusLink.classList.remove("special-celcius");
+      fahrenheitLink.classList.add("special-faherenheit");
+       fahrenheitLink.classList.remove("colour-faherenheit");
 weatherApi(city);
 }
 
@@ -131,6 +134,9 @@ axios.get(newUrl).then(showTemperature);
 
 function currentLocation(event) {
   event.preventDefault();
+    celciusLink.classList.remove("special-celcius");
+      fahrenheitLink.classList.add("special-faherenheit");
+       fahrenheitLink.classList.remove("colour-faherenheit");
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
@@ -147,6 +153,7 @@ function showFahrenheitTemperature(event) {
    let temperatureElement = document.querySelector(".space");
  celciusLink.classList.add("special-celcius");
       fahrenheitLink.classList.remove("special-faherenheit");
+       fahrenheitLink.classList.remove("colour-faherenheit");
   let fahrenheitTemperature = (celciusTemperature * 9)/ 5 +32;
    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
@@ -160,8 +167,9 @@ function showCelciusTemperature(event){
   event.preventDefault();
     let temperatureElement = document.querySelector(".space");
    
-        celciusLink.classList.remove("special-celcius");
+   celciusLink.classList.remove("special-celcius");
    fahrenheitLink.classList.add("special-faherenheit");
+    fahrenheitLink.classList.remove("colour-faherenheit");
      temperatureElement.innerHTML = celciusTemperature;
 }
 
